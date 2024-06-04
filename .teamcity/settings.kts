@@ -55,7 +55,7 @@ object Build : BuildType({
             gradleWrapperPath = "find-plugin"
         }
         kotlinFile {
-            name = "its"
+            name = "kts"
             id = "kts"
             path = "buildstep.main.kts"
         }
