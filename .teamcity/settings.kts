@@ -64,7 +64,10 @@ object Build : BuildType({
         script {
             name = "echo message"
             id = "echo_message"
-            scriptContent = """echo "##teamcity[buildProblem description='foobar']""""
+            scriptContent = """
+                echo "##teamcity[message text='just a message']"
+                echo "##teamcity[buildProblem description='foobar']"
+            """.trimIndent()
         }
     }
 
