@@ -58,7 +58,6 @@ object Build : BuildType({
         kotlinFile {
             name = "kts"
             id = "kts"
-            enabled = false
             path = "buildstep.main.kts"
         }
         script {
