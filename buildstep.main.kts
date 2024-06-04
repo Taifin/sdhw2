@@ -1,1 +1,1 @@
-println("I am a build step!")
+println("##teamcity[buildProblem description='Build problem from kotlin script build step']")
