@@ -1,6 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.gradle
-import jetbrains.buildServer.configs.kotlin.buildSteps.kotlinScript
+import jetbrains.buildServer.configs.kotlin.buildSteps.kotlinFile
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 /*
@@ -54,10 +54,10 @@ object Build : BuildType({
             buildFile = "find-plugin/build.gradle.kts"
             gradleWrapperPath = "find-plugin"
         }
-        kotlinScript {
+        kotlinFile {
             name = "its"
             id = "kts"
-            content = """println("Hello, world")"""
+            path = "buildstep.main.kts"
         }
     }
 
