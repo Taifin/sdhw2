@@ -1,6 +1,7 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.gradle
 import jetbrains.buildServer.configs.kotlin.buildSteps.kotlinFile
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 /*
@@ -59,6 +60,11 @@ object Build : BuildType({
             id = "kts"
             enabled = false
             path = "buildstep.main.kts"
+        }
+        script {
+            name = "echo message"
+            id = "echo_message"
+            scriptContent = "echo ##teamcity[message text='foobar']"
         }
     }
 
