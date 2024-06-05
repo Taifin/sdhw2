@@ -1,9 +1,9 @@
 import java.io.File
 
-println("##teamcity[blockOpened name='block1']")
-println("##teamcity[message text='foobar']")
-println("##teamcity[message text='bibaboba']")
-println("##teamcity[blockClosed name='block1']")
+println("##teamcity[compilationStarted compiler='kotlinc']")
+println("##teamcity[message text='foobar' status='WARNING']")
+println("##teamcity[message text='bibaboba' status='ERROR']")
+println("##teamcity[compilationFinished compiler='kotlinc']")
 
 var jarFile = File("find-plugin/build/libs/find.jar")
 if (jarFile.exists()) {
