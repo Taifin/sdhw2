@@ -1,5 +1,7 @@
 import java.io.File
 
+fun String.serviceMessage() = println("##teamcity[$this]")
+
 println("##teamcity[compilationStarted compiler='kotlinc']")
 println("##teamcity[message text='foobar' status='WARNING']")
 println("##teamcity[message text='bibaboba' status='ERROR']")
@@ -10,6 +12,18 @@ println("##teamcity[message flowId='flow2' text='foo']")
 
 println("##teamcity[message flowId='flow1' text='bar']")
 println("##teamcity[message flowId='flow2' text='bar']")
+
+"testSuiteStarted name=suite".serviceMessage()
+"testStarted name=test1".serviceMessage()
+"testFinished name=test1 duration=100".serviceMessage()
+"testStarted name=test2 captureStandardOutput=true".serviceMessage()
+"testFinished name=test2".serviceMessage()
+"testSuiteFinished name=suite".serviceMessage()
+
+"testSuiteStarted name=suite2".serviceMessage()
+"testStarted name=testS2".serviceMessage()
+"testFinished name=testS2".serviceMessage()
+"testSuiteFinished name=suite2".serviceMessage()
 
 var jarFile = File("find-plugin/build/libs/find.jar")
 if (jarFile.exists()) {
