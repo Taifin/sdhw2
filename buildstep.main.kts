@@ -15,8 +15,10 @@ println("##teamcity[message flowId='flow2' text='bar']")
 
 "testSuiteStarted name='suite'".serviceMessage()
 "testStarted name='test1'".serviceMessage()
-"testFinished name='test1' duration='100'".serviceMessage()
+println("hahahahahaha")
+"testFinished name='test1' duration='10000'".serviceMessage()
 "testStarted name='test2' captureStandardOutput='true'".serviceMessage()
+println("hihihihihihi")
 "testFinished name='test2'".serviceMessage()
 "testSuiteFinished name='suite'".serviceMessage()
 
