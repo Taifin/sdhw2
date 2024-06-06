@@ -32,7 +32,7 @@ println("##teamcity[message flowId='flow2' text='bar']")
 
 "testSuiteStarted name='suite'".serviceMessage()
 
-sleep(5000)
+sleep(10000)
 
 "progressStart 'test suite |'suite|''".serviceMessage()
 
@@ -47,6 +47,7 @@ println("hahahahahaha")
 println("hihihihihihi")
 "testIgnored name='test2' message='I don|'t like it'".serviceMessage()
 "testFinished name='test2'".serviceMessage()
+sleep(5000)
 
 "testStarted name='test3'".serviceMessage()
 "testMetadata name='just some metadata' testName='test3' type='ms' value='434.5'".serviceMessage()
