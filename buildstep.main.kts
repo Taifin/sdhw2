@@ -33,6 +33,7 @@ println("hihihihihihi")
 "testStarted name='retry'".serviceMessage()
 "testRetrySupport enabled='true'".serviceMessage()
 "testFailed name='retry' type='comparisonFailure' details='idk it just failed' expected='foobar' actual='barfoo'".serviceMessage()
+"testFinished name='retry'".serviceMessage()
 
 "testStarted name='retry'".serviceMessage()
 
