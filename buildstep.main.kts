@@ -1,4 +1,5 @@
 import java.io.File
+import java.lang.Thread.sleep
 
 fun String.serviceMessage() = println("##teamcity[$this]")
 
@@ -16,6 +17,8 @@ fun String.serviceMessage() = println("##teamcity[$this]")
         "    </body>\n" +
         "</html>'".serviceMessage()
 
+"progressMessage 'start of the build step'".serviceMessage()
+
 println("##teamcity[compilationStarted compiler='kotlinc']")
 println("##teamcity[message text='foobar' status='WARNING']")
 println("##teamcity[message text='bibaboba' status='ERROR']")
@@ -28,6 +31,10 @@ println("##teamcity[message flowId='flow1' text='bar']")
 println("##teamcity[message flowId='flow2' text='bar']")
 
 "testSuiteStarted name='suite'".serviceMessage()
+
+sleep(5000)
+
+"progressStart 'test suite |'suite|''".serviceMessage()
 
 "testStarted name='test1'".serviceMessage()
 println("hahahahahaha")
@@ -43,7 +50,7 @@ println("hihihihihihi")
 
 "testStarted name='test3'".serviceMessage()
 "testMetadata name='just some metadata' testName='test3' type='ms' value='434.5'".serviceMessage()
-"inspection typeId='123' message='this is an inspection from test3' file='.gitignore' line='1' SEVERITY='ERROR'".serviceMessage()
+"inspection typeId='123' message='this is an inspection from test3' file='README.md' line='10' SEVERITY='ERROR'".serviceMessage()
 "testFinished name='test3'".serviceMessage()
 
 "testStarted name='retry'".serviceMessage()
@@ -56,6 +63,7 @@ println("hihihihihihi")
 "testFinished name='retry'".serviceMessage()
 
 "testSuiteFinished name='suite'".serviceMessage()
+"progressStart 'test suite |'suite|''".serviceMessage()
 
 "testSuiteStarted name='suite2'".serviceMessage()
 "testStarted name='testS2'".serviceMessage()
