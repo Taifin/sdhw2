@@ -14,12 +14,30 @@ println("##teamcity[message flowId='flow1' text='bar']")
 println("##teamcity[message flowId='flow2' text='bar']")
 
 "testSuiteStarted name='suite'".serviceMessage()
+
 "testStarted name='test1'".serviceMessage()
 println("hahahahahaha")
+"testStdOut out='text'".serviceMessage()
+"testStdErr out='error text'".serviceMessage()
 "testFinished name='test1' duration='10000'".serviceMessage()
+
 "testStarted name='test2' captureStandardOutput='true'".serviceMessage()
 println("hihihihihihi")
+"testIgnored name='test2' message='I don|'t like it".serviceMessage()
 "testFinished name='test2'".serviceMessage()
+
+"testStarted name='test3'".serviceMessage()
+"testMetadata name='just some metadata' testName='test3' type='ms' value='434.5'".serviceMessage()
+"testFinished name='test3'".serviceMessage()
+
+"testStarted name='retry'".serviceMessage()
+"testRetrySupport enabled='true'".serviceMessage()
+"testFailed name='retry' type='comparisonFailure' details='idk it just failed' expected='foobar' actual='barfoo'".serviceMessage()
+
+"testStarted name='retry'".serviceMessage()
+
+"testFinished name='retry'".serviceMessage()
+
 "testSuiteFinished name='suite'".serviceMessage()
 
 "testSuiteStarted name='suite2'".serviceMessage()
