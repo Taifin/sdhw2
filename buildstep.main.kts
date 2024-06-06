@@ -38,7 +38,7 @@ sleep(5000)
 
 "testStarted name='test1'".serviceMessage()
 println("hahahahahaha")
-"inspection typeId='123' message='this is an inspection from test1' file='cli/src/main/kotlin/cub/taifin/App.kt' line='14' SEVERITY='WEAK WARNING'".serviceMessage()
+"inspection typeId='123' message='this is an inspection from test1' file='cli/src/main/kotlin/cub/taifin/App.kt' line='14' SEVERITY='WARNING'".serviceMessage()
 "testStdOut name='test1' out='text'".serviceMessage()
 "testStdErr name='test1' out='error text'".serviceMessage()
 "testFinished name='test1' duration='10000'".serviceMessage()
@@ -50,7 +50,7 @@ println("hihihihihihi")
 
 "testStarted name='test3'".serviceMessage()
 "testMetadata name='just some metadata' testName='test3' type='ms' value='434.5'".serviceMessage()
-"inspection typeId='123' message='this is an inspection from test3' file='README.md' line='10' SEVERITY='ERROR'".serviceMessage()
+"inspection typeId='123' message='this is an inspection from test3' file='cli/src/build.gradle.kts' line='10' SEVERITY='ERROR'".serviceMessage()
 "testFinished name='test3'".serviceMessage()
 
 "testStarted name='retry'".serviceMessage()
