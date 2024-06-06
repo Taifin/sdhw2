@@ -3,19 +3,8 @@ import java.lang.Thread.sleep
 
 fun String.serviceMessage() = println("##teamcity[$this]")
 
-"inspectionType id='123' name='inspectionType' category='Style violations' description='<html>\n" +
-        "    <body>\n" +
-        "    Reports unnecessary local variables, which add nothing to the comprehensibility of a method. Variables caught include local variables which are immediately returned, local variables that are immediately assigned to another variable and then not used, and local variables which always have the same value as another\n" +
-        "    local variable or parameter.\n" +
-        "    <!-- tooltip end -->\n" +
-        "        <p>\n" +
-        "        Use the first checkbox below to have this inspection ignore variables which are immediately returned or thrown. Some coding styles suggest using such variables for clarity and ease of debugging.\n" +
-        "        </p>\n" +
-        "        <p>\n" +
-        "        Use the second checkbox below to have this inspection ignore variables which are annotated.\n" +
-        "        </p>\n" +
-        "    </body>\n" +
-        "</html>'".serviceMessage()
+"inspectionType id='123' name='inspectionType' category='Style violations' description='foobar'".serviceMessage()
+
 
 "progressMessage 'start of the build step'".serviceMessage()
 
