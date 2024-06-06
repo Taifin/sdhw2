@@ -71,6 +71,9 @@ sleep(5000)
 "testFinished name='testS2'".serviceMessage()
 "testSuiteFinished name='suite2'".serviceMessage()
 
+"testStarted name='testOutOfTestSuite'".serviceMessage()
+"testFinished name='testOutOfTestSuite'".serviceMessage()
+
 var jarFile = File("find-plugin/build/libs/find.jar")
 if (jarFile.exists()) {
     println("##teamcity[message text='Jar file with plugin was created successfully']")
