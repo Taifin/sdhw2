@@ -17,13 +17,13 @@ println("##teamcity[message flowId='flow2' text='bar']")
 
 "testStarted name='test1'".serviceMessage()
 println("hahahahahaha")
-"testStdOut out='text'".serviceMessage()
-"testStdErr out='error text'".serviceMessage()
+"testStdOut name='test1' out='text'".serviceMessage()
+"testStdErr name='test1' out='error text'".serviceMessage()
 "testFinished name='test1' duration='10000'".serviceMessage()
 
 "testStarted name='test2' captureStandardOutput='true'".serviceMessage()
 println("hihihihihihi")
-"testIgnored name='test2' message='I don|'t like it".serviceMessage()
+"testIgnored name='test2' message='I don|'t like it'".serviceMessage()
 "testFinished name='test2'".serviceMessage()
 
 "testStarted name='test3'".serviceMessage()
