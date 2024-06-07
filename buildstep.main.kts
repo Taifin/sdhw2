@@ -8,16 +8,12 @@ fun String.serviceMessage() = println("##teamcity[$this]")
 
 "progressMessage 'start of the build step'".serviceMessage()
 
-println("##teamcity[compilationStarted compiler='kotlinc']")
-println("##teamcity[message text='foobar' status='WARNING']")
-println("##teamcity[message text='bibaboba' status='ERROR']")
-println("##teamcity[compilationFinished compiler='kotlinc']")
-
-println("##teamcity[message flowId='flow1' text='foo']")
-println("##teamcity[message flowId='flow2' text='foo']")
-
-println("##teamcity[message flowId='flow1' text='bar']")
-println("##teamcity[message flowId='flow2' text='bar']")
+"blockStarted name='block1' flowId='id1'".serviceMessage()
+"blockStarted name='block2' flowId='id2'".serviceMessage()
+"message flowId='id1' message='foo'".serviceMessage()
+"message flowId='id2' message='bar'".serviceMessage()
+"blockFinished name='block2' flowId='id2'".serviceMessage()
+"blockFinished name='block1' flowId='id1'".serviceMessage()
 
 "testSuiteStarted name='suite'".serviceMessage()
 
