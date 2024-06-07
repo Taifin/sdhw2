@@ -8,12 +8,12 @@ fun String.serviceMessage() = println("##teamcity[$this]")
 
 "progressMessage 'start of the build step'".serviceMessage()
 
-"blockStarted name='block1' flowId='id1'".serviceMessage()
-"blockStarted name='block2' flowId='id2'".serviceMessage()
+"blockOpened name='block1' flowId='id1'".serviceMessage()
+"blockOpened name='block2' flowId='id2'".serviceMessage()
 "message flowId='id1' text='foo'".serviceMessage()
 "message flowId='id2' text='bar'".serviceMessage()
-"blockFinished name='block2' flowId='id2'".serviceMessage()
-"blockFinished name='block1' flowId='id1'".serviceMessage()
+"blockClosed name='block2' flowId='id2'".serviceMessage()
+"blockClosed name='block1' flowId='id1'".serviceMessage()
 
 "testSuiteStarted name='suite'".serviceMessage()
 
