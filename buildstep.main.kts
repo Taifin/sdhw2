@@ -10,8 +10,8 @@ fun String.serviceMessage() = println("##teamcity[$this]")
 
 "blockStarted name='block1' flowId='id1'".serviceMessage()
 "blockStarted name='block2' flowId='id2'".serviceMessage()
-"message flowId='id1' message='foo'".serviceMessage()
-"message flowId='id2' message='bar'".serviceMessage()
+"message flowId='id1' text='foo'".serviceMessage()
+"message flowId='id2' text='bar'".serviceMessage()
 "blockFinished name='block2' flowId='id2'".serviceMessage()
 "blockFinished name='block1' flowId='id1'".serviceMessage()
 
