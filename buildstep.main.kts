@@ -52,6 +52,18 @@ sleep(5000)
 
 "testFinished name='retry'".serviceMessage()
 
+"testStarted name='failWithExpectedActual'".serviceMessage()
+"testFailed name='failWithExpectedActual' expected='foo' actual='bar'".serviceMessage()
+"testFinished name='failWithExpectedActual'".serviceMessage()
+
+"testStarted name='comparisonFailedExpectedActual'".serviceMessage()
+"testFailed name='comparisonFailedExpectedActual' expected='barfoo' actual='foobar' type='comparisonFailure'".serviceMessage()
+"testFinished name='comparisonFailedExpectedActual'".serviceMessage()
+
+"testStarted name='customTypeExpectedActual'".serviceMessage()
+"testFailed name='customTypeExpectedActual' expected='abacaba' actual='cabadaba' type='SK'".serviceMessage()
+"testFinished name='customTypeExpectedActual'".serviceMessage()
+
 "testSuiteFinished name='suite'".serviceMessage()
 "progressStart 'test suite |'suite|''".serviceMessage()
 
