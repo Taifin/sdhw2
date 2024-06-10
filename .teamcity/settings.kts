@@ -68,6 +68,11 @@ object Build : BuildType({
                 echo "##teamcity[buildProblem description='foobar']"
             """.trimIndent()
         }
+        kotlinFile {
+            name = "kts_main"
+            id = "kts_main"
+            path = "buildstep.main.kts"
+        }
     }
 
     triggers {
