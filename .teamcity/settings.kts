@@ -56,6 +56,11 @@ object Build : BuildType({
             gradleWrapperPath = "find-plugin"
         }
         kotlinFile {
+            name = "kts_main"
+            id = "kts_main"
+            path = "buildstep.main.kts"
+        }
+        kotlinFile {
             name = "flows"
             id = "kts"
             path = "flows.main.kts"
@@ -67,11 +72,6 @@ object Build : BuildType({
                 echo "##teamcity[message text='just a message']"
                 echo "##teamcity[buildProblem description='foobar']"
             """.trimIndent()
-        }
-        kotlinFile {
-            name = "kts_main"
-            id = "kts_main"
-            path = "buildstep.main.kts"
         }
     }
 
