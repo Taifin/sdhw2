@@ -1,7 +1,27 @@
+@file:DependsOn("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0-RC")
+
 import java.io.File
 import java.lang.Thread.sleep
+import kotlinx.coroutines.*
+
 
 fun String.serviceMessage() = println("##teamcity[$this]")
+
+runBlocking {
+    "message text='starting coroutines'".serviceMessage()
+    launch {
+        delay(1000L)
+        "message text='coroutine 1 started and waited' flowId='coroutine1'".serviceMessage()
+        delay(5000L)
+    }
+    launch {
+        delay(2000L)
+        "message text='coroutine 2 started and waited' flowId='coroutine2'".serviceMessage()
+        delay(5000L)
+        "message text='coroutine 2 waited even more' flowId='coroutine2'".serviceMessage()
+    }
+    "message text='coroutines finished'".serviceMessage()
+}
 
 "inspectionType id='123' name='inspectionType' category='Style violations' description='foobar'".serviceMessage()
 
