@@ -10,14 +10,13 @@ fun String.serviceMessage() = println("##teamcity[$this]")
 runBlocking {
     "message text='starting coroutines'".serviceMessage()
     launch {
-        delay(1000L)
+        delay(5000L)
         "message text='coroutine 1 started and waited' flowId='coroutine1'".serviceMessage()
         delay(5000L)
     }
     launch {
-        delay(2000L)
-        "message text='coroutine 2 started and waited' flowId='coroutine2'".serviceMessage()
-        delay(5000L)
+        "message text='coroutine 2 started' flowId='coroutine2'".serviceMessage()
+        delay(10000L)
         "message text='coroutine 2 waited even more' flowId='coroutine2'".serviceMessage()
     }
     "message text='coroutines finished'".serviceMessage()
