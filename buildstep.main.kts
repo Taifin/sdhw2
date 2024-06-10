@@ -3,6 +3,7 @@
 import java.io.File
 import java.lang.Thread.sleep
 import kotlinx.coroutines.*
+import java.nio.file.Paths
 
 
 fun String.serviceMessage() = println("##teamcity[$this]")
@@ -24,6 +25,7 @@ runBlocking {
 
 "inspectionType id='123' name='inspectionType' category='Style violations' description='foobar'".serviceMessage()
 
+"publishArtifacts ${Paths.get("find-plugin/build/libs/find.jar")} => find.jar".serviceMessage()
 
 "progressMessage 'start of the build step'".serviceMessage()
 
