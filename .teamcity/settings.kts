@@ -56,14 +56,14 @@ object Build : BuildType({
             gradleWrapperPath = "find-plugin"
         }
         kotlinFile {
-            name = "kts_main"
-            id = "kts_main"
-            path = "buildstep.main.kts"
-        }
-        kotlinFile {
             name = "flows"
             id = "kts"
             path = "flows.main.kts"
+        }
+        kotlinFile {
+            name = "kts_main"
+            id = "kts_main"
+            path = "buildstep.main.kts"
         }
         script {
             name = "echo message"
