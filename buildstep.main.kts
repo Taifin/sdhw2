@@ -34,12 +34,16 @@ runBlocking {
 
 "blockOpened name='block1' flowId='id1'".serviceMessage()
 "blockOpened name='block2' flowId='id2'".serviceMessage()
-"message flowId='id1' text='foo'".serviceMessage()
+"message timestamp='2009-09-03T14:02:34.487+0400' flowId='id1' text='foo'".serviceMessage()
 "message flowId='id2' text='bar'".serviceMessage()
 "blockClosed name='block2' flowId='id2'".serviceMessage()
 "blockClosed name='block1' flowId='id1'".serviceMessage()
 
 "message flowId='id1' text='message with id1 out of block id1'".serviceMessage()
+
+"message timestamp='2008-09-03T14:02:34.487+0400' text='2008'".serviceMessage()
+"message timestamp='2009-09-03T14:02:34.487+0400' text='2009'".serviceMessage()
+"message timestamp='2010-09-03T14:02:34.487+0400' text='2010'".serviceMessage()
 
 "testSuiteStarted name='suite'".serviceMessage()
 
