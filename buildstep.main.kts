@@ -35,6 +35,8 @@ runBlocking {
 "blockClosed name='block2' flowId='id2'".serviceMessage()
 "blockClosed name='block1' flowId='id1'".serviceMessage()
 
+"message flowId='id1' text='message with id1 out of block id1'".serviceMessage()
+
 "testSuiteStarted name='suite'".serviceMessage()
 
 sleep(10000)
