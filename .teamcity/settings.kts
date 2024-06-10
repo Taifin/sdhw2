@@ -58,7 +58,7 @@ object Build : BuildType({
         kotlinFile {
             name = "kts"
             id = "kts"
-            path = "buildstep.main.kts"
+            path = "flows.main.kts"
         }
         script {
             name = "echo message"
