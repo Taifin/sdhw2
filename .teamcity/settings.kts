@@ -56,7 +56,7 @@ object Build : BuildType({
             gradleWrapperPath = "find-plugin"
         }
         kotlinFile {
-            name = "kts"
+            name = "flows"
             id = "kts"
             path = "flows.main.kts"
         }
