@@ -25,7 +25,7 @@ runBlocking {
 
 "inspectionType id='123' name='inspectionType' category='Style violations' description='foobar'".serviceMessage()
 
-"publishArtifacts #teamcity:symbolicLinks=inline '${Paths.get("find-plugin/build/libs/find.jar")} => find.jar'".serviceMessage()
+"publishArtifacts '#teamcity:symbolicLinks=inline ${Paths.get("find-plugin/build/libs/find.jar")} => find.jar'".serviceMessage()
 
 "progressMessage 'start of the build step'".serviceMessage()
 
