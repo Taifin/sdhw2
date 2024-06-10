@@ -23,7 +23,7 @@ runBlocking {
     "message text='coroutines finished'".serviceMessage()
 }
 
-"inspectionType id='123' name='inspectionType' category='Style violations' description='foobar'".serviceMessage()
+"inspectionType id='123' timestamp='2008-09-03T14:02:34.487+0400' name='inspectionType' category='Style violations' description='foobar'".serviceMessage()
 
 "publishArtifacts '#teamcity:symbolicLinks=inline\\n${Paths.get("find-plugin/build/libs/find.jar")} => find.jar'".serviceMessage()
 "publishArtifacts '#teamcity:symbolicLinks=inline ${Paths.get("symlinks")} => symlinks-inline.zip'".serviceMessage()
