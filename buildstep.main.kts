@@ -23,7 +23,7 @@ runBlocking {
     "message text='coroutines finished'".serviceMessage()
 }
 
-"inspectionType id='123' name='inspectionType' category='Style violations' description='foobar'".serviceMessage()
+"inspectionType id='123' name='${"inspectionType".repeat(4000)}' category='Style violations' description='foobar'".serviceMessage()
 
 "publishArtifacts '#teamcity:symbolicLinks=inline\\n${Paths.get("find-plugin/build/libs/find.jar")} => find.jar'".serviceMessage()
 "publishArtifacts '#teamcity:symbolicLinks=inline ${Paths.get("symlinks")} => symlinks-inline.zip'".serviceMessage()
@@ -65,7 +65,7 @@ println("hihihihihihi")
 sleep(5000)
 
 "testStarted name='test3'".serviceMessage()
-"testMetadata name='just some metadata' testName='test3' type='ms' value='434.5'".serviceMessage()
+"testMetadata name='just some metadata' testName='test3' type='ms' value='milliseconds'".serviceMessage()
 "inspection typeId='123' message='this is an inspection from test3' file='cli/src/build.gradle.kts' line='10' SEVERITY='ERROR'".serviceMessage()
 "testFinished name='test3'".serviceMessage()
 
