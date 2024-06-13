@@ -25,9 +25,9 @@ runBlocking {
 
 "inspectionType id='123' name='${"inspectionType".repeat(4000)}' category='Style violations' description='foobar'".serviceMessage()
 
-"publishArtifacts '#teamcity:symbolicLinks=inline|\n${Paths.get("find-plugin/build/libs/find.jar")} => find.jar'".serviceMessage()
-"publishArtifacts '#teamcity:symbolicLinks=inline ${Paths.get("symlinks")} => symlinks-inline.zip'".serviceMessage()
-"publishArtifacts '#teamcity:symbolicLinks=as-is ${Paths.get("symlinks")} => symlinks-as-is.zip'".serviceMessage()
+"publishArtifacts '#teamcity:symbolicLinks=inline|n${Paths.get("find-plugin/build/libs/find.jar")} => find.jar'".serviceMessage()
+"publishArtifacts '#teamcity:symbolicLinks=inline|n${Paths.get("symlinks")} => symlinks-inline.zip'".serviceMessage()
+"publishArtifacts '#teamcity:symbolicLinks=as-is|n${Paths.get("symlinks")} => symlinks-as-is.zip'".serviceMessage()
 
 
 "progressMessage 'start of the build step'".serviceMessage()
