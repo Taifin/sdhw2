@@ -1,0 +1,1 @@
+ServiceMessages.message("Current Kotlin version is: ${KotlinVersion.CURRENT}")
