@@ -41,6 +41,11 @@ object Build : BuildType({
     }
 
     steps {
+        kotlinFile {
+            name = "TeamcityBuildstep"
+            id = "TeamcityBuildstep"
+            path = "custom.teamcity.buildstep.kts"
+        }
         gradle {
             name = "Build Cli Library"
             id = "Build_Cli_Library"
@@ -59,11 +64,13 @@ object Build : BuildType({
             name = "flows"
             id = "kts"
             path = "flows.main.kts"
+            param("scriptContent", "@file:dependsOn(org.example:foobar:1.0)")
         }
         kotlinFile {
             name = "kts_main"
             id = "kts_main"
             path = "buildstep.main.kts"
+            param("scriptContent", "@file:dependsOn(org.example:foobar:1.0)")
         }
         script {
             name = "echo message"
