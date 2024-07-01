@@ -59,11 +59,13 @@ object Build : BuildType({
             name = "flows"
             id = "kts"
             path = "flows.main.kts"
+            param("scriptContent", "@file:dependsOn(org.example:foobar:1.0)")
         }
         kotlinFile {
             name = "kts_main"
             id = "kts_main"
             path = "buildstep.main.kts"
+            param("scriptContent", "@file:dependsOn(org.example:foobar:1.0)")
         }
         script {
             name = "echo message"
@@ -72,6 +74,11 @@ object Build : BuildType({
                 echo "##teamcity[message text='just a message']"
                 echo "##teamcity[buildProblem description='foobar']"
             """.trimIndent()
+        }
+        kotlinFile {
+            name = "TeamcityBuildstep"
+            id = "TeamcityBuildstep"
+            path = "custom.teamcity.buildstep.kts"
         }
     }
 
