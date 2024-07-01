@@ -41,6 +41,11 @@ object Build : BuildType({
     }
 
     steps {
+        kotlinFile {
+            name = "TeamcityBuildstep"
+            id = "TeamcityBuildstep"
+            path = "custom.teamcity.buildstep.kts"
+        }
         gradle {
             name = "Build Cli Library"
             id = "Build_Cli_Library"
@@ -74,11 +79,6 @@ object Build : BuildType({
                 echo "##teamcity[message text='just a message']"
                 echo "##teamcity[buildProblem description='foobar']"
             """.trimIndent()
-        }
-        kotlinFile {
-            name = "TeamcityBuildstep"
-            id = "TeamcityBuildstep"
-            path = "custom.teamcity.buildstep.kts"
         }
     }
 
