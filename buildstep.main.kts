@@ -9,7 +9,7 @@ import java.nio.file.Paths
 fun String.serviceMessage() = println("##teamcity[$this]")
 
 runBlocking {
-    "message timestamp='2008-09-03T14:02:34.487+0400' text='starting coroutines \uFFFF \uABAC \uBEBE'".serviceMessage()
+    "message timestamp='2008-09-03T14:02:34.487+0400' text='starting coroutines \u0639 |0x0639 \uABAC \uBEBE'".serviceMessage()
     launch {
         delay(5000L)
         "message text='coroutine 1 started and waited' flowId='coroutine1'".serviceMessage()
