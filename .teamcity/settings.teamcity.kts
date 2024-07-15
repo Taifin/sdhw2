@@ -66,6 +66,11 @@ object Build : BuildType({
                 echo "##teamcity[buildProblem description='foobar']"
             """.trimIndent()
         }
+        kotlinFile {
+            name = "Lib"
+            id = "Lib"
+            path = "lib.main.kts"
+        }
     }
 
     triggers {
