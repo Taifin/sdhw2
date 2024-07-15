@@ -35,7 +35,7 @@ project {
 object Build : BuildType({
     name = "Main Build Configuration"
 
-    File("Foo")
+//    File("Foo")
 
     vcs {
         root(DslContext.settingsRoot)
