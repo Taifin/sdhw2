@@ -46,20 +46,6 @@ object Build : BuildType({
             id = "TeamcityBuildstep"
             path = "custom.teamcity.buildstep.kts"
         }
-        gradle {
-            name = "Build Cli Library"
-            id = "Build_Cli_Library"
-            tasks = "publishToMavenLocal"
-            buildFile = "cli-commands/build.gradle.kts"
-            gradleWrapperPath = "cli-commands"
-        }
-        gradle {
-            name = "Build Plugin Jar"
-            id = "Build_Plugin_Jar"
-            tasks = "jar"
-            buildFile = "find-plugin/build.gradle.kts"
-            gradleWrapperPath = "find-plugin"
-        }
         kotlinFile {
             name = "flows"
             id = "kts"
