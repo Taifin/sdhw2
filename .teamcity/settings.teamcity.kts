@@ -1,5 +1,4 @@
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildSteps.gradle
 import jetbrains.buildServer.configs.kotlin.buildSteps.kotlinFile
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
@@ -35,6 +34,8 @@ project {
 
 object Build : BuildType({
     name = "Main Build Configuration"
+
+    File("Foo")
 
     vcs {
         root(DslContext.settingsRoot)
