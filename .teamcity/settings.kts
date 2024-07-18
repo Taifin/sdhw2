@@ -28,7 +28,6 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 version = "2024.03"
 
 project {
-
     buildType(Build)
 }
 
@@ -40,31 +39,31 @@ object Build : BuildType({
     }
 
     steps {
-        kotlinFile {
-            name = "TeamcityBuildstep"
-            id = "TeamcityBuildstep"
-            path = "custom.teamcity.buildstep.kts"
-        }
-        kotlinFile {
-            name = "flows"
-            id = "kts"
-            path = "flows.main.kts"
-            param("scriptContent", "@file:dependsOn(org.example:foobar:1.0)")
-        }
-        kotlinFile {
-            name = "kts_main"
-            id = "kts_main"
-            path = "buildstep.main.kts"
-            param("scriptContent", "@file:dependsOn(org.example:foobar:1.0)")
-        }
-        script {
-            name = "echo message"
-            id = "echo_message"
-            scriptContent = """
-                echo "##teamcity[message text='just a message']"
-                echo "##teamcity[buildProblem description='foobar']"
-            """.trimIndent()
-        }
+//        kotlinFile {
+//            name = "TeamcityBuildstep"
+//            id = "TeamcityBuildstep"
+//            path = "custom.teamcity.buildstep.kts"
+//        }
+//        kotlinFile {
+//            name = "flows"
+//            id = "kts"
+//            path = "flows.main.kts"
+//            param("scriptContent", "@file:dependsOn(org.example:foobar:1.0)")
+//        }
+//        kotlinFile {
+//            name = "kts_main"
+//            id = "kts_main"
+//            path = "buildstep.main.kts"
+//            param("scriptContent", "@file:dependsOn(org.example:foobar:1.0)")
+//        }
+//        script {
+//            name = "echo message"
+//            id = "echo_message"
+//            scriptContent = """
+//                echo "##teamcity[message text='just a message']"
+//                echo "##teamcity[buildProblem description='foobar']"
+//            """.trimIndent()
+//        }
         kotlinFile {
             name = "Lib"
             id = "Lib"
