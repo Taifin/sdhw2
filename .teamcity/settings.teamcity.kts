@@ -37,6 +37,8 @@ object Build : BuildType({
         root(DslContext.settingsRoot)
     }
 
+    val file = File("foo")
+
     steps {
 //        kotlinFile {
 //            name = "TeamcityBuildstep"
