@@ -22,6 +22,7 @@ changeBuildType(RelativeId("Build")) {
         update<KotlinScriptFileBuildStep>(0) {
             name = "Libib"
             clearConditions()
+            compiler = "%teamcity.tool.kotlin.compiler.bundled%"
         }
     }
 }
