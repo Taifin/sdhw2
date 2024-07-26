@@ -1,7 +1,3 @@
-import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildSteps.*
-import jetbrains.buildServer.configs.kotlin.triggers.*
-import java.io.File
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -30,6 +26,9 @@ version = "2024.03"
 project {
     buildType(Build)
 }
+
+val f = Foo()
+f.meow()
 
 object Build : BuildType({
     name = "Main Build Configuration"
