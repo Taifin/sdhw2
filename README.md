@@ -1,7 +1,7 @@
 # Homework #3 (Architectural styles)
 
 ## Solution
-
+ 
 This repository contains three separate subprojects: 
 
 * `cli-commands` -- library exposing necessary functionality to develop new commands and ship them as plugins
