@@ -1,5 +1,3 @@
-package bar
-
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.kotlinFile
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
@@ -27,9 +25,7 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 */
 
 version = "2024.07"
-val f = Foo()
 project {
-    foo()
     buildType(Build)
 }
 
@@ -51,6 +47,7 @@ object Build : BuildType({
 
     triggers {
         vcs {
+            branchFilter = "+:*"
         }
     }
 })
