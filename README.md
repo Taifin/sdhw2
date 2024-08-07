@@ -12,7 +12,7 @@ This repository contains three separate subprojects:
 avoid making fully separate `cli-commands` library, but I am not that familiar with Gradle and Java packages concepts to
 reason about what is better)
 
-To run the application:
+To run the application: 
 1. Publish `cli-commands` library to your local Maven repository:
     ```bash
     cd cli-commands && ./gradlew publishToMavenLocal && cd ..
