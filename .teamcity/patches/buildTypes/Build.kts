@@ -18,7 +18,10 @@ changeBuildType(RelativeId("Build")) {
             }
         }
         trigger1.apply {
-            branchFilter = "+:*"
+            branchFilter = """
+                +:*
+                +:refs/heads/*
+            """.trimIndent()
 
         }
     }
