@@ -14,14 +14,10 @@ changeBuildType(RelativeId("Build")) {
     triggers {
         val trigger1 = find<VcsTrigger> {
             vcs {
-                branchFilter = "+:refs/heads/*"
             }
         }
         trigger1.apply {
-            branchFilter = """
-                +:*
-                +:refs/heads/*
-            """.trimIndent()
+            branchFilter = "+:refs/heads/*"
 
         }
     }
