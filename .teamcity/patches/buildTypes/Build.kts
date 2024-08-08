@@ -17,7 +17,6 @@ changeBuildType(RelativeId("Build")) {
             }
         }
         trigger1.apply {
-            branchFilter = "+:refs/heads/*"
 
         }
     }
