@@ -47,7 +47,6 @@ object Build : BuildType({
 
     triggers {
         vcs {
-            branchFilter = "+:refs/heads/*"
         }
     }
 })
